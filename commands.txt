@@ -1,0 +1,35 @@
+
+To start the containers
+    $ docker compose up -d
+
+To Restart containers:
+    $ docker compose restart
+
+List the containers
+    $ docker compose ps 
+
+Tail the containers' logs
+    $ docker compose logs [service]
+    $ docker compose logs -f [service]
+    Replace [service] with a service name (e.g. nginx) to display this service's logs only.
+
+Stop the containers
+    $ docker compose stop
+
+Stop and/or destroy the containers
+    $ docker compose down
+
+Stop and/or destroy the containers and their volumes (including named volumes)
+    $ docker compose down -v
+
+Delete everything, including images and orphan containers
+    $ docker compose down -v --rmi all --remove-orphans
+
+See the image sizes
+    $ docker compose images 
+
+To remove all the things
+    $ docker compose down -v --rmi all --remove-orphans
+
+To enter bash of services
+    $ docker compose exec php(service) bash
